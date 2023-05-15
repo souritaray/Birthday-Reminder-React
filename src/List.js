@@ -1,25 +1,16 @@
-import { useState } from "react";
-function List({detail}){
-    const[store,setStore]=useState("");
-return(
+import React from 'react';
+const List = ({ person,btn}) => {
+  return (
     <>
-    {detail.map((person)=>{
-       
-        
-return(
-    
-<div className="person" key={person.id}>
-    <img src={person.image}  />
+          <article key={person.id} className='person'>
+            <img src={person.image} alt={person.name} />
             <div>
               <h4>{person.name}</h4>
               <p>{person.age} years</p>
-               
+             {btn}
             </div>
-       
-    </div>
-)
-    })}
-  </>  
-)
-}
+          </article>
+    </>
+  );
+};
 export default List;
