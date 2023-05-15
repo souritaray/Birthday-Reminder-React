@@ -1,5 +1,5 @@
 import React from 'react';
-const List = ({ person,removeFunc}) => {
+const List = ({person,removeFunc}) => {
   return (
     <>
           <article key={person.id} className='person'>

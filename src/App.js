@@ -14,7 +14,7 @@ function App() {
         <h3>{people.length} birthdays today</h3>
         {people.map((person) => {
         return (
-          <List person={person} removeFunc={removeFunc}/>
+          <List key={person.id} person={person} removeFunc={removeFunc}/>
         );
       })}
         <button onClick={() => setPeople([])}>clear all</button>
