@@ -12,11 +12,7 @@ function App() {
     <main>
       <section className='container'>
         <h3>{people.length} birthdays today</h3>
-        {people.map((person) => {
-        return (
-          <List key={person.id} person={person} removeFunc={removeFunc}/>
-        );
-      })}
+          <List people={people} removeFunc={removeFunc}/>
         <button onClick={() => setPeople([])}>clear all</button>
       </section>
     </main>
